@@ -3,47 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Tasks</h1>
-        <button id="add-task-btn" aria-label="Add a new task" class="btn">
-            add Task
-        </button>
-    </header>
+    <main>
+        <section>
+            <h1>Tasks</h1>
+            <button id="add-task-btn" class="btn">add Task</button>
+            <hr>
+            <div class="divide">
+                <ul id="todo" >
+                    <h2>Todo</h2>
+                </ul>
 
-    <main role="main">
-        <section aria-label="To do tasks">
-            <ul id="todo">
-                <h2>To Do</h2>
-            </ul>
+                <ul id="done-tasks">
+                    <h2>Tasks done</h2>
+                </ul>
+            </div>
         </section>
 
-        <section aria-label="Completed tasks">
-            <ul id="done-tasks">
-                <h2>Done</h2>
-            </ul>
-        </section>
+        <dialog id="modal">
+            <form id="add-task">
+                <button id="close-dialog">X</button>
+                <h2>what will you do?</h2>
+                <input type="text" id="task-input">
+                <button type="submit" class="btn" id="done">add task</button>
+            </form>
+        </dialog>
     </main>
-
-    <dialog id="modal" aria-modal="true">
-        <form id="add-task">
-            <button id="close-dialog" aria-label="Close dialog" type="button">
-                X
-            </button>
-            <h2>What will you do?</h2>
-            <label for="task-input">Enter a task</label>
-            <input id="task-input" name="task" type="text" required aria-required="true">
-            <button id="done" type="submit" class="btn">
-                add task
-            </button>
-        </form>
-    </dialog>
-
     <script src="script.js"></script>
 </body>
 
