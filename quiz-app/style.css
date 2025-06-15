@@ -1,0 +1,129 @@
+:root {
+    --dark-bg: #121212;
+    --dark-section: #1e1e1e;
+    --dark-accent: #ffcc5b;
+    --dark-text: #ffffff;
+    --dark-gray: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma;
+    background: var(--dark-bg);
+    color: var(--dark-text);
+    padding: 20px;
+}
+
+section {
+    background: var(--dark-section);
+    max-width: 800px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 35px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px black;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--dark-accent);
+}
+
+fieldset {
+    border: 1px solid var(--dark-accent);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background: var(--dark-gray);
+}
+
+legend {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-accent);
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: var(--dark-section);
+    border-radius: 3px;
+    font-size: 1.105rem;
+    transition: background 0.3s ease;
+}
+
+.question:hover {
+    background: var(--dark-gray);
+}
+
+label {
+    cursor: pointer;
+    flex: 1;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+    accent-color: var(--dark-accent);
+}
+
+button {
+    padding: 10px 20px;
+    background: var(--dark-accent);
+    color: var(--dark-bg);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #ffb733;
+}
+
+@media (max-width: 500px) {
+    .question {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.success {
+    margin-top: 20px;
+    padding: 10px;
+    background: #dff2da;
+    color: #2d7a04;
+    border: 2px solid #2d7a04;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.failed {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f2dada;
+    color: #9e0404;
+    border: 2px solid #9e0404;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
